@@ -43,7 +43,7 @@ In the predicted image, we can see that YOLO successfully detects various object
 Next, we apply YOLO to a video of a tennis match. In this scenario, YOLO analyzes each frame of the video and assigns bounding boxes, class names, and confidence scores to all detected objects.
 
 Video Analysis:
-![YOLO Video Analysis](runs/detect/predict3/input_video.avi)
+![YOLO Video Analysis](runs/detect/predict3/input_video.gif)
 
 However, we notice that the detection of the tennis ball (classified as "sports ball") is inconsistent across frames. To improve our analysis and gather more detailed information, we will need to fine-tune a detector model specifically for the tennis ball.
 
