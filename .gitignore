@@ -134,3 +134,9 @@ cython_debug/
 
 # pt files
 *.pt
+
+# ignore config.json file
+config.json
+
+# ignore tennis ball data
+tennis-ball-detection-6
