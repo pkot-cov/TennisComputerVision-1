@@ -47,7 +47,27 @@ Video Analysis:
 
 However, we notice that the detection of the tennis ball (classified as "sports ball") is inconsistent across frames. To improve our analysis and gather more detailed information, we will need to fine-tune a detector model specifically for the tennis ball.
 
-Stay tuned for further updates as we refine our model and enhance our tennis match analysis capabilities.
+## Refining the YOLO Model for Tennis Ball Detection
+
+To enhance the accuracy of our YOLO model in detecting tennis balls, we will utilize a specialized training dataset tailored for this purpose. This dataset is available on Roboflow and can be accessed via the following link:
+
+[Tennis Ball Detection Dataset on Roboflow](https://universe.roboflow.com/viren-dhanwani/tennis-ball-detection)
+![Sample Image from Dataset](https://universe.roboflow.com/viren-dhanwani/tennis-ball-detection/images/9XJCnesUcIYeXojS1muR)
+
+
+The dataset utilized for refining the YOLO model is a collection of images capturing tennis court scenes, closely resembling the initial image used in our analysis. It includes aerial photographs of tennis courts with the tennis ball in motion, often appearing blurry due to its high speed. Each image in the dataset is annotated with bounding boxes that precisely outline the tennis ball, providing essential training data for improving the model's detection accuracy.
+
+### Dataset Composition:
+
+- **Total Images**: 578
+- **Training Set**: 428 images
+- **Validation Set**: 100 images
+- **Test Set**: 50 images
+
+This dataset is instrumental in training our YOLO model to better detect and track tennis balls, particularly in challenging conditions where the ball is moving rapidly. By fine-tuning our model with this dataset, we aim to enhance its performance in real-time tennis match analysis.
+
+
+
 
 
 ## Contributing
