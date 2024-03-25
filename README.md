@@ -29,7 +29,7 @@ This project aims to bring computer vision technologies into the realm of tennis
 To begin our analysis, we start with a static image of a tennis match. This initial step helps us understand the basics of image detection using the YOLO model.
 
 Original Image:
-![Original Tennis Match Image](input_video/image.png)
+![Original Tennis Match Image](input_videos/image.png)
 
 After running this image through the YOLO model, we observe the following results:
 
