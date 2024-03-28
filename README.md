@@ -55,7 +55,7 @@ To enhance the accuracy of our YOLO model in detecting tennis balls, we will uti
 ![Sample Image from Dataset](readme_folder/fed3_jpg.rf.09d2a51b2725b6734cf7c512f9eab272.jpg)
 
 
-The dataset utilized for refining the YOLO model is a collection of images capturing tennis court scenes, closely resembling the initial image used in our analysis. It includes aerial photographs of tennis courts with the tennis ball in motion, often appearing blurry due to its high speed. Each image in the dataset is annotated with bounding boxes that precisely outline the tennis ball, providing essential training data for improving the model's detection accuracy.
+The dataset utilized for refining the YOLO model is a collection of images capturing tennis court scenes, closely resembling the initial image used in our analysis. It includes aerial photographs of tennis courts with the tennis ball in motion, often appearing blurry due to its high speed. Each image in the dataset is annotated with bounding boxes that precisely outline the tennis ball, providing essential training data for improving the model's detection accuracy (Bounding Box [0 0.58359375 0.4861111111111111 0.0125 0.025] the first number is the class the last for are the bounding box).
 
 ### Dataset Composition:
 
