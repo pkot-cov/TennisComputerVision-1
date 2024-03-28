@@ -66,6 +66,23 @@ The dataset utilized for refining the YOLO model is a collection of images captu
 
 This dataset is instrumental in training our YOLO model to better detect and track tennis balls, particularly in challenging conditions where the ball is moving rapidly. By fine-tuning our model with this dataset, we aim to enhance its performance in real-time tennis match analysis.
 
+### Improving Object Detection with the Refined YOLOv5 Model
+
+After refining the YOLOv5 model to enhance the detection of tennis balls, we observed a significant improvement in the model's ability to track the ball. However, this specialization led to a trade-off where the model's capability to detect other objects like players, chairs, and clocks diminished. To address this issue and achieve a more balanced object detection performance, we plan to implement the following steps:
+
+![Improved Ball Detection](runs/detect/predict4/input_video.gif)
+
+1. **Multi-Task Learning**: Integrate a multi-task learning approach where the model is trained to perform both tasks - detecting the tennis ball and other relevant objects simultaneously. This can be achieved by using a shared backbone network with separate branches for different tasks.
+
+2. **Data Augmentation**: Enhance the training dataset with more diverse images that include various objects present in a tennis match. This will help the model learn to recognize a wider range of objects along with the tennis ball.
+
+3. **Fine-Tuning with Balanced Dataset**: Re-train the model with a balanced dataset that includes an equal proportion of images with tennis balls and other objects. This will prevent the model from being overly biased towards detecting only the tennis ball.
+
+4. **Ensemble Models**: Consider using an ensemble of models where one model is specialized in detecting the tennis ball, and another model is trained to detect other objects. The final detections can be combined to achieve comprehensive object detection in the scene.
+
+By implementing these steps, we aim to refine the YOLOv5 model further to not only excel in tennis ball detection but also maintain its ability to detect other important objects in the tennis match, providing a holistic analysis of the game.
+
+
 
 
 

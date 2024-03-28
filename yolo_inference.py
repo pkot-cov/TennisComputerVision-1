@@ -1,7 +1,11 @@
 # YOLO (You Only Look Once) is a popular convolutional neural network (CNN) architecture for object detection.
 from ultralytics import YOLO
 
-model = YOLO('yolov8x')  # Initialize model
+# inital prediction using yolov8 did well at seeing all objects in video and images
+# model = YOLO('yolov8x')  # Initialize model
+
+# Now take trained model yolo5_last.pt and use it to see the tennis ball in the video.
+model = YOLO('models/yolo5_last.pt')  # Initialize model
 
 # this is used to create the bounding box around, class label and confidence score.
 # model.predict('input_videos/image.png', save=True)  # Inference on image
