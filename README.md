@@ -68,7 +68,7 @@ This dataset is instrumental in training our YOLO model to better detect and tra
 
 ### Improving Object Detection with the Refined YOLOv5 Model
 
-After refining the YOLOv5 model to enhance the detection of tennis balls, we observed a significant improvement in the model's ability to track the ball. However, this specialization led to a trade-off where the model's capability to detect other objects like players, chairs, and clocks diminished. To address this issue and achieve a more balanced object detection performance, we plan to implement the following steps:
+After training the YOLOv5 model to enhance the detection of tennis balls, we observed a significant improvement in the model's ability to track the ball. However, this specialization led to a trade-off where the model's capability to detect other objects like players, chairs, and clocks diminished. To address this issue and achieve a more balanced object detection performance, we plan to implement the following steps:
 
 ![Improved Ball Detection](runs/detect/predict4/input_video.gif)
 
