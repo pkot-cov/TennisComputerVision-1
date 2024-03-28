@@ -66,22 +66,25 @@ The dataset utilized for refining the YOLO model is a collection of images captu
 
 This dataset is instrumental in training our YOLO model to better detect and track tennis balls, particularly in challenging conditions where the ball is moving rapidly. By fine-tuning our model with this dataset, we aim to enhance its performance in real-time tennis match analysis.
 
-### Improving Object Detection with the Refined YOLOv5 Model
+### Implementing Dual-Pass Detection for Comprehensive Analysis
 
-After training the YOLOv5 model to enhance the detection of tennis balls, we observed a significant improvement in the model's ability to track the ball. However, this specialization led to a trade-off where the model's capability to detect other objects like players, chairs, and clocks diminished. To address this issue and achieve a more balanced object detection performance, we plan to implement the following steps:
+In our refined YOLOv5 model, we have significantly improved the detection of tennis balls, achieving more consistent results than before. However, this specialization has led to a limitation: the model now primarily detects tennis balls and overlooks other crucial elements in the scene, such as players and objects. This is a result of training the model exclusively on a dataset comprising tennis balls.
 
 ![Improved Ball Detection](runs/detect/predict4/input_video.gif)
 
-1. **Multi-Task Learning**: Integrate a multi-task learning approach where the model is trained to perform both tasks - detecting the tennis ball and other relevant objects simultaneously. This can be achieved by using a shared backbone network with separate branches for different tasks.
+To overcome this challenge and ensure a comprehensive analysis of tennis matches, we will adopt a dual-pass detection approach:
 
-2. **Data Augmentation**: Enhance the training dataset with more diverse images that include various objects present in a tennis match. This will help the model learn to recognize a wider range of objects along with the tennis ball.
+1. **First Pass - Player and Object Detection**: Utilize a general object detection model, such as YOLOv8, to detect players, chairs, and other objects in the frame. This pass will provide us with bounding boxes around these objects, capturing their presence and locations.
 
-3. **Fine-Tuning with Balanced Dataset**: Re-train the model with a balanced dataset that includes an equal proportion of images with tennis balls and other objects. This will prevent the model from being overly biased towards detecting only the tennis ball.
+2. **Second Pass - Tennis Ball Detection**: Apply our refined YOLOv5 model specifically trained for tennis ball detection. This pass will focus on accurately tracking the tennis ball throughout the match.
 
-4. **Ensemble Models**: Consider using an ensemble of models where one model is specialized in detecting the tennis ball, and another model is trained to detect other objects. The final detections can be combined to achieve comprehensive object detection in the scene.
+By combining the results of these two passes, we can achieve a holistic view of the match, tracking both the players and the tennis ball simultaneously.
 
-By implementing these steps, we aim to refine the YOLOv5 model further to not only excel in tennis ball detection but also maintain its ability to detect other important objects in the tennis match, providing a holistic analysis of the game.
+### Object Tracking for Consistent Analysis
 
+A key aspect of our analysis is object tracking, which involves maintaining the identity of objects across frames. While our current approach provides bounding boxes around players, these boxes are not consistent between frames due to the movement of objects. To address this, we will implement object tracking techniques that match bounding boxes across frames, ensuring that we can track the same player throughout the video. This matching process, known as object tracking, will allow us to analyze the movements and positions of players more accurately.
+
+By integrating these enhancements into our system, we aim to provide a more detailed and consistent analysis of tennis matches, capturing both the dynamics of the ball and the players' movements.
 
 
 
