@@ -1,4 +1,5 @@
-import cv2 # how we are going to read and write videos
+# how we are going to read and write videos
+import cv2
 
 def read_video(video_path):
     # read the video from the video path
