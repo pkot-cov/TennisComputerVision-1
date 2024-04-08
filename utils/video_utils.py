@@ -14,7 +14,7 @@ def read_video(video_path):
             break
         frames.append(frame)
     cap.release()
-    return cap
+    return frames
 
 # we want to save the video 
 def save_video(output_video_frames, output_video_path):

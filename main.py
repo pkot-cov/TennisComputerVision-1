@@ -5,7 +5,7 @@ from utils import (read_video,
 
 def main():
     # path to the video
-    input_video_path = "input_videos/input_video.mp4"
+    input_video_path = "input_videos\input_video.mp4"
     # read in video frames from utils
     video_frames = read_video(input_video_path)
     
