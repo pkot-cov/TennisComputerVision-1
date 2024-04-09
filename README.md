@@ -155,3 +155,5 @@ As part of our effort to enhance the analysis of tennis matches, we have trained
 ## Developing the Main Tennis Analyzer
 
 With the ResNet50 model adapted for key points detection, we are now focused on creating the main tennis analyzer. This component will integrate various aspects of our system, including player and ball tracking, key points detection, and gameplay analysis. The tennis analyzer aims to provide a comprehensive overview of matches, offering insights into player performance, game dynamics, and strategic elements.
+
+
