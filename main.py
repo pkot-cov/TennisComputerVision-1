@@ -8,7 +8,7 @@ from utils import (read_video,
 from trackers import PlayerTracker
 
 def main():
-    # read video from input_videos folder
+    # read video from input_videos folder   s
     input_video_path = "input_videos\input_video.mp4"
     # read in video frames from utils
     video_frames = read_video(input_video_path)
@@ -18,7 +18,7 @@ def main():
     player_tracker = PlayerTracker(model_path="yolov8x")
     # given the video frames, detect the players in the frames
     player_detections = player_tracker.detect_frames(video_frames,
-                                                     read_from_stub=False,
+                                                     read_from_stub=True,
                                                      stub_path="tracker_stubs/player_detections.pkl")
     
     #draw output
